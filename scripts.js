@@ -1,7 +1,7 @@
-/*!
-* Start Bootstrap - Business Frontpage v5.0.8 (https://startbootstrap.com/template/business-frontpage)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+var states = document.getElementById('states');
+states.onchange = function(){
+  console.log('toy index: ' + states.selectedIndex);
+  console.log('toy name: ' + states.options[states.selectedIndex].text);
+  console.log(states.value + '.jpg');
+  document.getElementById('postcard').style.backgroundImage = url('plane1.jpg');
+}
