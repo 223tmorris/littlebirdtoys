@@ -27,8 +27,7 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center my-5">
-                            <!-- <h1 class="display-5 fw-bolder text-white mb-2">Little Bird Toys put the logo picture here</h1>
-                            <p class="lead text-white-50 mb-4">hand-crafted, original, classic, high-quality wooden toys </p> -->
+                            <!-- <p class="lead text-white-50 mb-4">hand-crafted, original, classic, high-quality wooden toys </p> -->
                             <h1 class="display-5 fw-bolder text-white mb-2">ㅤ</h1>
                             <h1 class="display-5 fw-bolder text-white mb-2">ㅤ</h1>
                             <p class="lead text-white-50 mb-4">ㅤ</p>
@@ -127,28 +126,47 @@
         <!-- Toy Info -->
         <section class="bg-light py-5 border-bottom">
           <div class="container">
-            <div class="second step">
-          		<div id="postcard">
-          			<p id="greeting" style="color:black;">To See Our Products</p>
-          			<p id="state-heading" style="color:black;">Select a Toy</p>
-          		</div>
-          	</div>
-          	<div class="first step">
-      				<h2>Choose a Toy</h2>
-      				<select name="states" id="states">
-      					<option selected value="empty">Select a Toy</option>
-                <option value="plane1">Wooden Toy Airplane</option>
-                <option value="train7">Wooden Toy Train</option>
-                <option value="boat2">Wooden Toy Boat</option>
-                <option value="block2">Wooden Block Set</option>
-                <option value="car2">Wooden Toy Car</option>
-      				</select>
-              <br><br>
-              <p id="description">Description of toy</p>
-      			</div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="container">
+                  <div id="image">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="container dropdown">
+                  <h2>Choose a Toy</h2>
+                  <select name="toys" id="toys">
+                    <option selected value="empty">Select a Toy</option>
+                    <option value="plane1">Wooden Toy Airplane</option>
+                    <option value="train7">Wooden Toy Train</option>
+                    <option value="boat2">Wooden Toy Boat</option>
+                    <option value="block2">Wooden Block Set</option>
+                    <option value="car2">Wooden Toy Car</option>
+                    <option class="hidden" value="emptydesc">To see our products, select a toy.</option>
+                    <option class="hidden" value="plane1desc">Wooden Airplane Toy. Defying gravity and soaring in the sky is every boys dream. Keep him dreaming big with this classic wooden airplane made by us, here at Little Bird Toys in Bound Brook, NJ. The airplane comes ready to fly with a kid-safe Natural Harvest Finish and a propeller that spins. The dimensions of the Airplane is approximately 3.5"H x 7"L x 7"W. The Airplane Comes with Real Rolling Wheels and Spinning Propellers. Made out of Solid Wood - Built to Last for a Lifetime of Play. Perfect Creative Gift for Toddlers. Safe for Young Kids - Comes with a Non-Toxic Finish!</option>
+                    <option class="hidden" value="train7desc">A beautiful handmade wooden train set - Engine and three interchangeable cars Handmade detailed artwork made of real beech wood. Wonderful Christmas gift! Large size - 84 cm length, 11 height and 13 width Moving wheel mechanism. Fully ecological product, only natural materials. High quality and durable. Suitable for children from 3 years old Lots of fun guaranteed at any age! This set can be painted using wood paint. Theses toys are #timeless and can be passed down for generations to come. Please note that these toys have small parts that could break off if used inappropriately.</option>
+                    <option class="hidden" value="boat2desc">On the coast of Maine, "Lobstah" boats like this one are a common sight. This new wooden toy model really floats and makes a great bath toy. The safe and simple design encourages a child to use his or her own imagination. Batteries not required! Handcrafted in Maine with soft and rounded corners and edges to nourish a child's senses and to be safe for toddlers. Built of solid Maine white pine and sturdy enough to withstand years of use before being passed down to the next generation. Boat comes with two peg lobster- people  SIZE : 10.5"W x 3.5"H, MATERIAL : Solid White Pine</option>
+                    <option class="hidden" value="block2desc">High-Grade Quality: Hardwood blocks are sturdy, solid and safe for kids. 72 naturally finished and smooth-sanded hardwood blocks. Case size is 13” L x 12” W x 2” H. Packaged in a handsome, wooden storage crate for easy storage. Suitable for children ages 3 and up. Highly durable set for indoor or outdoor use including: lawns, patios, living rooms, preschools, kindergartens & anywhere else. Make your own dream castle anywhere. Block play helps promote creativity, independent play, cooperative play, fine motor skills and hand-eye coordination. When building, children must consider proportions, symmetry, size and more, which benefit early cultivation of concepts. This product is conducive to your child's imagination, allowing various kinds of combinations to be built.</option>
+                    <option class="hidden" value="car2desc">Beautifully handcrafted wooden car. One-of-a-kind - (the photos included for this item may not be the actual car that you will receive. All cars are the same size and construction). Great toy that will inspire imaginative and active play. This car will be in your family for generations to come - think heirloom or keepsake. Handcrafted from a variety of domestic and exotic hardwoods including maple, oak, mahogany, cherry woods, etc., coated with clear lacquer to enhance and hold the natural wood color. All edges are rounded over and sanded for a silky smooth finish. Please be aware there may be choking hazards with small children. Toys have a few small parts that may break with excessive rough or improper use.</option>
+                  </select>
+                  <br>
+                  <p id="description" style="color:black;">To see our products, select a toy.</p>
+                </div>
+              </div>
+            </div>
           </div>
           <br><br><br><br><br><br><br>
         </section>
+
+        <script>
+          var toys = document.getElementById("toys");
+          toys.onchange = function(){
+            var toy = toys.selectedIndex + 6;
+            document.getElementById("image").style.backgroundImage = "url(" + toys.value + ".jpg)";
+            document.getElementById("description").innerHTML = toys.options[toy].text;
+          }
+        </script>
         <!-- Testimonials -->
         <section class="py-5 border-bottom">
             <div class="container px-5 my-5 px-5">
