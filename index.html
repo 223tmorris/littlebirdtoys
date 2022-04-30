@@ -14,7 +14,7 @@
         <meta name="author" content="" />
         <title>Little Bird Toys</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="logosmall.png" />
+        <link rel="icon" type="image/x-icon" href="logotab.png" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -72,7 +72,7 @@
         <section class="showcase">
             <div class="container-fluid p-0">
                 <div class="row g-0 bg-light border-bottom">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('Alternate Logo 1.png')"></div>
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('logosized.png')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                         <h2>Our Story</h2>
                         <p class="lead mb-0">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="row g-0 border-bottom">
-                    <div class="col-lg-6 order-lg-1 text-white showcase-img" style="background-image: url('plane3_800x600.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 text-white showcase-img" style="background-image: url('plane3sized.png')"></div>
                     <div class="col-lg-6 order-lg-2 my-auto showcase-text">
                         <h2>Quality</h2>
                         <p class="lead mb-0">
@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <div class="row g-0 bg-light border-bottom">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('car3.png')"></div>
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('car3sized.png')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                         <h2>Sustainability</h2>
                         <p class="lead mb-0">
@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <div class="row g-0 border-bottom">
-                    <div class="col-lg-6 order-lg-1 text-white showcase-img" style="background-image: url('block1.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 text-white showcase-img" style="background-image: url('block1sized.png')"></div>
                     <div class="col-lg-6 order-lg-2 my-auto showcase-text">
                         <h2>Visit Us</h2>
                         <p class="lead mb-0">
@@ -138,11 +138,11 @@
                   <h2>Choose a Toy</h2>
                   <select name="toys" id="toys">
                     <option selected value="empty">Select a Toy</option>
-                    <option value="plane1">Wooden Toy Airplane</option>
-                    <option value="train7">Wooden Toy Train</option>
-                    <option value="boat2">Wooden Toy Boat</option>
-                    <option value="block2">Wooden Block Set</option>
-                    <option value="car2">Wooden Toy Car</option>
+                    <option value="plane1sized">Wooden Toy Airplane</option>
+                    <option value="train7sized">Wooden Toy Train</option>
+                    <option value="boat2sized">Wooden Toy Boat</option>
+                    <option value="block2sized">Wooden Block Set</option>
+                    <option value="car2sized">Wooden Toy Car</option>
                     <option class="hidden" value="emptydesc">To see our products, select a toy.</option>
                     <option class="hidden" value="plane1desc">Wooden Airplane Toy. Defying gravity and soaring in the sky is every boys dream. Keep him dreaming big with this classic wooden airplane made by us, here at Little Bird Toys in Bound Brook, NJ. The airplane comes ready to fly with a kid-safe Natural Harvest Finish and a propeller that spins. The dimensions of the Airplane is approximately 3.5"H x 7"L x 7"W. The Airplane Comes with Real Rolling Wheels and Spinning Propellers. Made out of Solid Wood - Built to Last for a Lifetime of Play. Perfect Creative Gift for Toddlers. Safe for Young Kids - Comes with a Non-Toxic Finish!</option>
                     <option class="hidden" value="train7desc">A beautiful handmade wooden train set - Engine and three interchangeable cars Handmade detailed artwork made of real beech wood. Wonderful Christmas gift! Large size - 84 cm length, 11 height and 13 width Moving wheel mechanism. Fully ecological product, only natural materials. High quality and durable. Suitable for children from 3 years old Lots of fun guaranteed at any age! This set can be painted using wood paint. Theses toys are #timeless and can be passed down for generations to come. Please note that these toys have small parts that could break off if used inappropriately.</option>
@@ -163,7 +163,7 @@
           var toys = document.getElementById("toys");
           toys.onchange = function(){
             var toy = toys.selectedIndex + 6;
-            document.getElementById("image").style.backgroundImage = "url(" + toys.value + ".jpg)";
+            document.getElementById("image").style.backgroundImage = "url(" + toys.value + ".png)";
             document.getElementById("description").innerHTML = toys.options[toy].text;
           }
         </script>
